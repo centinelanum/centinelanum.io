@@ -1,0 +1,861 @@
+*
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+	flex-direction: column;
+}
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+.card-container {
+    display: flex;
+    gap: 20px;
+    perspective: 1000px;
+	border-radius: 20px;
+	
+	flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+}
+
+/* Mover la tarjeta 6 a la siguiente fila */
+.card:nth-child(7) {
+    flex-basis: 100%; /* Hace que la tarjeta 6 ocupe toda la fila */
+    margin-bottom: 20px; /* Espacio adicional debajo de la tarjeta 6 */
+}
+
+/* A partir de la tarjeta 7, ocupar el 50% del ancho */
+.card:nth-child(n+8) {
+    flex-basis: calc(50% - 10px); /* Dos tarjetas por fila con espacio */
+}
+
+
+
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 20px;
+    
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+    color: white;
+	border-radius: 20px;
+	
+}
+
+.card-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back {
+    background-color: #370404;
+	border-radius: 20px;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+	
+}
+
+
+
+
+
+
+.login-container{
+	background: rgba(255, 255, 255, 0.2);
+	background-flter: blue(6px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	windows: 300px;
+}
+
+
+
+.card2 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 20px;
+    
+}
+
+.card2:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front2, .card-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front2 {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+    color: white;
+	border-radius: 20px;
+}
+
+.card-front2 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back2 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back2 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back2 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card3 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card3:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front3, .card-back3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front3 {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+    color: white;
+	border-radius: 20px;
+	
+}
+
+.card-front3 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back3 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back3 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back3 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+.card4 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card4:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front4, .card-back4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front4 {
+   background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+    color: white;
+	border-radius: 20px;
+}
+
+.card-front4 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back4 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back4 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back4 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card5 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card5:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front5, .card-back5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front5 {
+    background-color: #EDC71A;
+    color: black;
+	border-radius: 20px;
+	 background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+}
+
+.card-front5 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back5 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back5 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back5 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card6 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card6:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front6, .card-back6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front6 {
+    background-color: #EDC71A;
+    color: black;
+	border-radius: 20px;
+	 background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+}
+
+.card-front6 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back6 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back6 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back6 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card7 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card7:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front7, .card-back7 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front7 {
+    background-color: #EDC71A;
+    color: black;
+	border-radius: 20px;
+	 background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+}
+
+.card-front7 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back7 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back7 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back7 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card8 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card8:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front8, .card-back8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front8 {
+    background-color: #EDC71A;
+    color: black;
+	border-radius: 20px;
+	 background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+}
+
+.card-front8 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back8 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back8 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back8 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+.login-container{
+	background: rgba(255,255,255,0,8);
+	background-flter: blue(10px);
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	windows: 300px;
+}
+
+
+.card9 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 10px;
+	border-radius: 20px;
+    
+}
+
+.card9:hover {
+    transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.card-front9, .card-back9 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	border-radius: 20px;
+}
+
+.card-front9 {
+    background-color: #EDC71A;
+    color: black;
+	border-radius: 20px;
+	 background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Degradado de gris claro a negro */
+}
+
+.card-front9 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+	border-radius: 20px;
+}
+
+.card-back9 {
+    background-color: #370404;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+	border-radius: 20px;
+}
+
+.card-back9 button {
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	border-radius: 20px;
+}
+
+.card-back9 button:hover {
+    background-color: #FF9800;
+	border-radius: 20px;
+}
+
+
+
+/* Mover la tarjeta 6 a la siguiente fila */
+.card:nth-child(7) {
+    flex-basis: 100%; /* Hace que la tarjeta 6 ocupe toda la fila */
+    margin-bottom: 20px; /* Espacio adicional debajo de la tarjeta 6 */
+}
+
+/* A partir de la tarjeta 7, ocupar el 50% del ancho */
+.card:nth-child(n+8) {
+    flex-basis: calc(50% - 10px); /* Dos tarjetas por fila con espacio */
+}
+
+
+
+
+
+
+
+
+
+
+.main-title{
+	font-family: "Orbitron", sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	color: white;
+}
+
+.mi-oracion{
+	font-family: "Orbitron", sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

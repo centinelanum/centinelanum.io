@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Confirmación </title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .invoice-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  .invoice-details {
+    margin: 20px 0;
+  }
+
+  .invoice-details p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .invoice-details strong {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .invoice-footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .invoice-footer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .invoice-footer button:hover {
+    background-color: #0056b3;
+  }
+
+  .alert {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <div class="invoice-container">
+    <h2>Confirmación de ventas </h2>
+    <p>Por favor, revisa la información del nombre  que estas ingresando.</p>
+
+    <div class="invoice-details">
+      <p><strong>Nombre:</strong> <span id="info_nombre"></span></p>
+      <p><strong>Correo:</strong> <span id="info_correo"></span></p>
+      
+    </div>
+
+    <div class="invoice-footer">
+      <button onClick="window.location.href='caracteristicas3.html'">Editar Información</button>
+    </div>
+
+    <div class="alert" id="alerta"></div>
+
+  </div>
+
+  <script>
+    function cargarDatos() {
+      var nombre = localStorage.getItem("nombre");
+      
+      var correo = localStorage.getItem("correo");
+      
+
+      if (nombre && correo) {
+        document.getElementById("info_nombre").textContent = nombre;
+        document.getElementById("info_correo").textContent = correo;
+       
+      } else {
+        document.getElementById("alerta").textContent = "No se encontraron los datos. Por favor, ingresa los datos del vehículo.";
+        window.location.href = "caracteristicas3.html";
+      }
+    }
+
+    window.onload = cargarDatos;
+  </script>
+
+</body>
+</html>

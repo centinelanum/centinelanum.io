@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+	
+	
+	<div id="compra" class="purchase-section">
+            <h2>Haz Tu Pedido</h2>
+            <form id="form_venta" onSubmit="enviarFormulario(event)">
+                <input type="text" placeholder="Tu Nombre" id="nombre" name="nombre" required>
+                <input type="email" placeholder="Tu Email" id="correo" name="correo" required>
+                <button type="submit" class="cta-button">Comprar</button>
+				
+				
+				
+				
+				<div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('dropdownMenu2')"></button>
+                <div id="dropdownMenu2" class="dropdown-content">
+                    <a href="masmodelos1.html"></a>
+                </div>
+            </div>
+				
+				
+				
+				 <div class="invoice-container">
+    <h2>Confirmación de ventas </h2>
+    <p>Por favor, revisa la información del nombre  que estas ingresando.</p>
+
+    <div class="invoice-details">
+      <p><strong>Nombre:</strong> <span id="info_nombre"></span></p>
+      <p><strong>Correo:</strong> <span id="info_correo"></span></p>
+      
+    </div>
+
+    <div class="invoice-footer">
+      <button onClick="window.location.href='comprar'">Editar Información</button>
+    </div>
+
+    <div class="alert" id="alerta"></div>
+
+  </div>
+
+				
+				
+				
+				
+				
+				<script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        }
+		
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    if (dropdowns[i].style.display === "block") {
+                        dropdowns[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+			
+				
+				
+				
+				
+				
+				
+            </form>
+        </div>
+</body>
+</html>

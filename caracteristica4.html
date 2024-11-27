@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Compra Nuestro Producto</title>
+    <link rel="stylesheet" href="style.2.1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <center><h1>Compra Nuestro Producto</h1></center>
+        </header>
+		
+		<nav>
+			<ul class="menu">
+				<li><a href="forceat4.html" class="menu-item active" onClick="activarMenu(this)">Inicio</a></li>
+				<li><a href="#" class="menu-item" onClick="activarMenu(this)">Servicio</a></li>
+				<li><a href="#" class="menu-item" onClick="activarMenu(this)">Contactos</a></li>
+				<li><a href="#" class="menu-item" onClick="activarMenu(this)">Informacion</a></li>
+			</ul>
+		</nav>
+
+        <div class="hero">
+            <h1>¡Descubre el Producto Que Cambiará Tu Vida!</h1>
+            <p>Innovador, eficiente y a un precio increíble.</p>
+            <a href="#compra" class="cta-button">Compra Ahora</a>
+			
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('dropdownMenu2')">Más características</button>
+                <div id="dropdownMenu2" class="dropdown-content">
+                    <a href="#opcion1">Color</a>
+                    <a href="#opcion2">Material</a>
+                    <a href="#opcion3">Procedencia</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <a href="++/mas modelos de superstar.html">
+                <img src="imagenes/SUPERSTARNEGROBLA.png" alt="Producto" class="product-image">
+            </a>
+            <div class="details">
+                <h2>Características Principales</h2>
+                <ul>
+                    <li>✔ Calidad Superior</li>
+                    <li>✔ Liviano</li>
+                    <li>✔ Diseño Moderno y Atractivo</li>
+                </ul>
+                <p class="price">Solo <span>Bs.360&nbsp; </span> (Precio regular: Bs.400)</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p>"¡Este producto ha cambiado completamente mi rutina! Totalmente recomendado." - Cliente Satisfecho</p>
+        </div>
+
+        <div id="compra" class="purchase-section">
+            <h2>Haz Tu Pedido</h2>
+            <form id="form_venta" onSubmit="enviarFormulario(event)">
+                <input type="text" placeholder="Tu Nombre" id="nombre" name="nombre" required>
+                <input type="email" placeholder="Tu Email" id="correo" name="correo" required>
+                <button type="submit" class="cta-button">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Compra Nuestro Producto. Todos los derechos reservados.</p>
+    </footer>
+	
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        }
+		
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    if (dropdowns[i].style.display === "block") {
+                        dropdowns[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+	
+	<script src="script.js"></script>
+	
+	
+	<script>
+	function enviarFormulario(event){
+		event.preventDefault();
+		var nombre=document.getElementById('nombre').value;
+		
+		var correo=document.getElementById('correo').value;
+		
+		
+		
+		if(nombre === "" || correo === ""){
+			
+			alert("Por favor, complete todos los campos.");
+			return;
+		}
+		
+		localStorage.setItem("nombre",nombre);
+		localStorage.setItem("correo",correo);
+		
+		
+		window.location.href="recepcion4.html";
+		
+	}
+	</script>
+	
+	
+	
+	
+</body>
+</html>
